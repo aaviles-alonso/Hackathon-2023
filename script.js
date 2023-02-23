@@ -30,15 +30,19 @@ form.addEventListener('submit', (evt) => {
 
 // })
 
-const ranBtn = document.querySelector('.form__btn--ron')
-const insoBtn = document.querySelector('.form__btn--insp')
+// btn 
+const ronBtn = document.querySelector('.form__btn--ron')
+const completeRandom = document.querySelector('.form__btn--insp')
 
-// ron event
-ranBtn.addEventListener('click', () => {
+// top div space
+const ronText = document.querySelector('.quote__one--text')
+// Ron event
+ronBtn.addEventListener('click', () => {
     axios
         .get('https://ron-swanson-quotes.herokuapp.com/v2/quotes')
         .then(res => {
-            console.log(res.data)
+            const ronQuote = res.data
+            ronText.innerText = ronQuote
         })
         .catch(err => console.log(err))
 })
@@ -51,6 +55,8 @@ const randomNum = (num) => {
 const quoteForm = document.querySelector('.quote__form')
 // console.log(quoteForm);
 
+const searchText = document.querySelector('.quote__two--text')
+
 // click event for a search quote
 quoteForm.addEventListener('submit', (evt) => {
     evt.preventDefault()
@@ -61,21 +67,25 @@ quoteForm.addEventListener('submit', (evt) => {
         .then(res => {
             const quotesData = res.data.results
             if (quotesData.length !== 0) {
-                const newQuote = quotesData[randomNum(7)].content
+                const newQuote = quotesData[randomNum(10)].content
+                searchText.innerText = newQuote
             } else {
-                console.log('try again')
+                searchText.innerText = 'Try Again'
             }
         })
         .catch(err => console.log(err))
 })
 
+// random quote 
+const random = document.querySelector('.quote__three--text')
+
 // click event for random quote
-insoBtn.addEventListener('click', () => {
+completeRandom.addEventListener('click', () => {
     axios
         .get('https://api.quotable.io/quotes?/random')
         .then(res => {
             const quoteArray = res.data.results[randomNum(20)].content
-            console.log(quoteArray)
+            random.innerText = quoteArray
         })
         .catch(err => console.log(err))
 })
