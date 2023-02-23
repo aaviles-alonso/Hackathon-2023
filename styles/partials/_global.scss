@@ -1,0 +1,51 @@
+// @use './typography' as *;
+// @use './variables' as *;
+
+* {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+// $color-blue: #83af9b;
+// $color-green: #c8c8a9;
+// $color-brown: #774f38;
+// $color-beige: #ece5ce;
+// $color-yellow: #f9cdad;
+// $color-pink: #fe4365;
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    overflow-x: hidden;
+    max-width: 800px;
+}
+
+.wrapper {
+    width: 100vw;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+    text-decoration: none;
+}
+
+button {
+    text-transform: uppercase;
+
+}
+
+// button>a {
+//     // color: $primary-color-wht;
+// }
