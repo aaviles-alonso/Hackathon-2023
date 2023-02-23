@@ -18,6 +18,7 @@ body {
   overflow-x: hidden;
   max-width: 800px;
   font-family: "Acme", sans-serif;
+
 }
 
 .wrapper {
@@ -46,8 +47,37 @@ button {
 }
 @media screen and (min-width: 768px) {
   .header__logo--image {
-    width: 90%;
-    height: 0%;
+
+    width: 15%;
+    height: 15%;
+    left: 8%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .header__logo--image {
+    left: 4.8%;
+  }
+}
+
+.hero__image {
+  width: 100vw;
+  height: 100vh;
+}
+@media screen and (min-width: 768px) {
+  .hero {
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff0f5;
+  }
+  .hero__image {
+    height: 100vh;
+    width: 95vw;
+    padding-left: 60px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero {
+    height: 80vh;
   }
 }
 
@@ -58,6 +88,8 @@ button {
 }
 .form__date {
   font-size: 1.5rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: grey;
 }
 .form__btn {
   background-color: #deb887;
@@ -77,6 +109,23 @@ button {
   color: #FFFFFF;
   text-align: center;
   transition: all 0.15s;
+}
+@media screen and (min-width: 768px) {
+  .form {
+    left: 45%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .form {
+    top: 78%;
+    left: 42%;
+  }
+  .form__date {
+    font-size: 3rem;
+  }
+  .form__btn {
+    padding: 1em 5em;
+  }
 }
 
 .hero__image {
@@ -237,4 +286,5 @@ iframe {
 .visible {
   z-index: -2;
   opacity: 0.6;
-}/*# sourceMappingURL=styles.css.map */
+}
+/*# sourceMappingURL=styles.css.map */

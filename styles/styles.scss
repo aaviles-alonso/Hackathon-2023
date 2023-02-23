@@ -3,30 +3,60 @@
 @use '../styles/mixins' as *;
 
 // header
-.header {
-    &__logo--image {
-        position: absolute;
-        width: 15%;
-        height: 10%;
-        left: 0%;
-        box-shadow: 2px 2px 4px black;
+.header{
+    &__logo--image{
+        position:absolute;
+        width:15%;
+        height:10%;
+        left:0%;
+        box-shadow:2px 2px 4px black;
 
-        @include tablet {
-            width: 90%;
-            height: 0%;
+        @include tablet{
+            width:15%;
+            height:15%;
+            left:8%;
+            }
         }
+        @include desktop{
+        &__logo--image{
+            left:4.8%;
+        }
+        }
+}
+
+// Hero Section
+.hero{
+    &__image{
+    width:100vw;
+    height:100vh;
+    }
+    @include tablet{
+        width:100vw;
+        height:100vh;
+        background-color:#fff0f5;
+        &__image{
+        height:100vh;
+        width:95vw;
+        padding-left:60px;
+        }       
+    }
+    @include desktop{
+        height:80vh
     }
 }
 
+}
 
 // Form Section
-.form {
-    position: absolute;
-    top: 60%;
-    left: 35%;
 
-    &__date {
-        font-size: 1.5rem;
+.form{
+    position:absolute;
+    top:60%;
+    left:35%;
+    &__date{
+    font-size:1.5rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color:grey;
     }
 
     &__btn {
@@ -75,6 +105,19 @@
     @include breaking2 {
         display: flex;
         justify-content: center;
+    }
+    @include tablet{
+    left:45%;
+    }
+    @include desktop{
+        top:78%;
+        left:42%;
+        &__date{
+font-size:3rem;
+        }
+        &__btn{
+            padding: 1em 5em;
+        }
     }
 }
 
@@ -164,6 +207,7 @@ button.form__btn--ron {
         margin-top: 0;
     }
 }
+
 
 button.quote__btn {
     top: 80%;
