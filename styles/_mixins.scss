@@ -11,3 +11,21 @@
         @content
     }
 }
+
+;
+
+@mixin breaking1 {
+    @media screen and (min-width: 451px) {
+        @content;
+    }
+}
+
+;
+
+@mixin breaking2 {
+    @media screen and (min-width: 600px) {
+        @content;
+    }
+}
+
+;

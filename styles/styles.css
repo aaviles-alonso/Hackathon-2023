@@ -17,6 +17,8 @@ html {
 body {
   overflow-x: hidden;
   max-width: 800px;
+  font-family: "Acme", sans-serif;
+
 }
 
 .wrapper {
@@ -45,6 +47,7 @@ button {
 }
 @media screen and (min-width: 768px) {
   .header__logo--image {
+
     width: 15%;
     height: 15%;
     left: 8%;
@@ -125,17 +128,163 @@ button {
   }
 }
 
-button.form__btn--ron {
-  top: 150%;
-  padding: 0.4em 3.4em;
-}
-
-button.form__btn--insp {
-  top: 160%;
-  padding: 0.9em 2em;
+.hero__image {
+  width: 100vw;
+  height: 100vh;
 }
 
 .hero__second--page {
   height: 100vh;
   width: 100vw;
-}/*# sourceMappingURL=styles.css.map */
+  position: relative;
+}
+
+.quote__form {
+  position: relative;
+}
+@media screen and (min-width: 600px) {
+  .quote__form {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.quote__one,
+.quote__two,
+.quote__three {
+  height: 30%;
+  width: 90vw;
+  margin: 0 auto;
+  position: relative;
+}
+
+.quote__one {
+  height: 27%;
+  margin-top: 2rem;
+}
+
+button.form__btn--ron {
+  position: absolute;
+  top: -1rem;
+  padding: 0.4em 3.4em;
+  z-index: 2;
+}
+@media screen and (min-width: 600px) {
+  button.form__btn--ron {
+    font-size: 1.8rem;
+  }
+}
+
+.quote__one--text,
+.quote__two--text,
+.quote__three--text {
+  margin-top: 7%;
+  width: 85vw;
+  height: 75%;
+  position: absolute;
+  top: 12%;
+  font-size: 1.8rem;
+  margin-left: 0.8rem;
+  text-align: center;
+}
+@media screen and (min-width: 451px) {
+  .quote__one--text,
+  .quote__two--text,
+  .quote__three--text {
+    height: 68%;
+    margin-top: 3%;
+    left: 50%;
+    transform: translateX(-51.5%);
+  }
+}
+@media screen and (min-width: 600px) {
+  .quote__one--text,
+  .quote__two--text,
+  .quote__three--text {
+    font-size: 2.5rem;
+  }
+}
+
+.quote__two {
+  margin-top: 3rem;
+  height: 33%;
+}
+.quote__two--text {
+  margin-top: 10%;
+  height: 70%;
+}
+@media screen and (min-width: 451px) {
+  .quote__two--text {
+    height: 65%;
+  }
+}
+
+.input__quote {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 1rem;
+  border-radius: 1px;
+  border: 2px solid #a58966;
+  margin-top: -2rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+@media screen and (min-width: 600px) {
+  .input__quote {
+    position: static;
+    width: 20rem;
+    transform: translateX(5%);
+    padding: 0;
+    margin-top: 0;
+  }
+}
+
+button.quote__btn {
+  top: 80%;
+  margin-top: 2.5rem;
+}
+@media screen and (min-width: 600px) {
+  button.quote__btn {
+    font-size: 1.8rem;
+    position: static;
+    margin-left: -5rem;
+  }
+}
+
+button.form__btn--insp {
+  padding: 0.9em 2em;
+  position: absolute;
+  top: -7%;
+}
+@media screen and (min-width: 600px) {
+  button.form__btn--insp {
+    font-size: 1.6rem;
+  }
+}
+
+.quote__three {
+  margin-top: 2rem;
+  position: relative;
+}
+.quote__three--text {
+  height: 78%;
+  margin-top: 4%;
+}
+
+iframe {
+  position: absolute;
+  width: 7rem;
+  height: 7rem;
+  opacity: 0.05;
+}
+
+.display {
+  position: absolute;
+}
+
+.visible {
+  z-index: -2;
+  opacity: 0.6;
+}
+/*# sourceMappingURL=styles.css.map */

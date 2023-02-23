@@ -13,6 +13,7 @@
     padding: 0;
 }
 
+
 html {
     font-size: 62.5%;
 }
@@ -20,6 +21,7 @@ html {
 body {
     overflow-x: hidden;
     max-width: 800px;
+    font-family: 'Acme', sans-serif;
 }
 
 .wrapper {
@@ -39,5 +41,4 @@ button {
     text-transform: uppercase;
 
 }
-
 
