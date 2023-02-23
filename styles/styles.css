@@ -17,7 +17,7 @@ html {
 body {
   overflow-x: hidden;
   max-width: 800px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Acme", sans-serif;
 }
 
 .wrapper {
@@ -93,22 +93,37 @@ button {
 .quote__form {
   position: relative;
 }
+@media screen and (min-width: 600px) {
+  .quote__form {
+    display: flex;
+    justify-content: center;
+  }
+}
 
 .quote__one,
 .quote__two,
 .quote__three {
-  height: 27%;
+  height: 30%;
   width: 90vw;
-  background-color: rgba(222, 184, 135, 0.2784313725);
   margin: 0 auto;
   position: relative;
 }
 
+.quote__one {
+  height: 27%;
+  margin-top: 2rem;
+}
+
 button.form__btn--ron {
   position: absolute;
-  top: -4%;
+  top: -1rem;
   padding: 0.4em 3.4em;
   z-index: 2;
+}
+@media screen and (min-width: 600px) {
+  button.form__btn--ron {
+    font-size: 1.8rem;
+  }
 }
 
 .quote__one--text,
@@ -123,6 +138,23 @@ button.form__btn--ron {
   margin-left: 0.8rem;
   text-align: center;
 }
+@media screen and (min-width: 451px) {
+  .quote__one--text,
+  .quote__two--text,
+  .quote__three--text {
+    height: 68%;
+    margin-top: 3%;
+    left: 50%;
+    transform: translateX(-51.5%);
+  }
+}
+@media screen and (min-width: 600px) {
+  .quote__one--text,
+  .quote__two--text,
+  .quote__three--text {
+    font-size: 2.5rem;
+  }
+}
 
 .quote__two {
   margin-top: 3rem;
@@ -130,7 +162,12 @@ button.form__btn--ron {
 }
 .quote__two--text {
   margin-top: 10%;
-  height: 72%;
+  height: 70%;
+}
+@media screen and (min-width: 451px) {
+  .quote__two--text {
+    height: 65%;
+  }
 }
 
 .input__quote {
@@ -138,11 +175,32 @@ button.form__btn--ron {
   left: 50%;
   transform: translateX(-50%);
   padding: 1rem;
-  border-radius: 4px;
+  border-radius: 1px;
   border: 2px solid #a58966;
   margin-top: -2rem;
   text-transform: uppercase;
   text-align: center;
+}
+@media screen and (min-width: 600px) {
+  .input__quote {
+    position: static;
+    width: 20rem;
+    transform: translateX(5%);
+    padding: 0;
+    margin-top: 0;
+  }
+}
+
+button.quote__btn {
+  top: 80%;
+  margin-top: 2.5rem;
+}
+@media screen and (min-width: 600px) {
+  button.quote__btn {
+    font-size: 1.8rem;
+    position: static;
+    margin-left: -5rem;
+  }
 }
 
 button.form__btn--insp {
@@ -150,10 +208,10 @@ button.form__btn--insp {
   position: absolute;
   top: -7%;
 }
-
-button.quote__btn {
-  top: 80%;
-  margin-top: 2.5rem;
+@media screen and (min-width: 600px) {
+  button.form__btn--insp {
+    font-size: 1.6rem;
+  }
 }
 
 .quote__three {
@@ -161,5 +219,22 @@ button.quote__btn {
   position: relative;
 }
 .quote__three--text {
-  height: 75%;
+  height: 78%;
+  margin-top: 4%;
+}
+
+iframe {
+  position: absolute;
+  width: 7rem;
+  height: 7rem;
+  z-index: -2;
+}
+
+.display {
+  position: absolute;
+}
+
+.visible {
+  z-index: -2;
+  opacity: 0.6;
 }/*# sourceMappingURL=styles.css.map */

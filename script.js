@@ -9,7 +9,7 @@ form.addEventListener('submit', (evt) => {
     evt.preventDefault()
     const birthday = evt.target[0].form[0].value
 
-    console.log(birthdayImg)
+    // console.log(birthdayImg)
 
 
     axios
@@ -17,6 +17,7 @@ form.addEventListener('submit', (evt) => {
         .then(res => {
             const imgUrl = res.data.url
             birthdayImg.src = imgUrl
+            form.reset()
             // console.log(imgUrl)
             // window.location.replace("./pages/subpage.html")
             document.getElementById("secondPage").scrollIntoView({ behavior: 'smooth' });
@@ -26,9 +27,20 @@ form.addEventListener('submit', (evt) => {
 
 // page 2
 
-// birthdayImg.addEventListener('click', function(){
+// visible
+const displayContent = document.querySelector('.visible')
+// console.log(window.navigate('#quotePage'))
 
-// })
+
+birthdayImg.addEventListener('click', function () {
+    if (displayContent) {
+        displayContent.classList.remove('visible')
+        birthdayImg.classList.add('visible')
+    }
+    console.log(displayContent)
+    // document.getElementById("quotePage").scrollIntoView({ behavior: 'smooth' });
+
+})
 
 // btn 
 const ronBtn = document.querySelector('.form__btn--ron')
