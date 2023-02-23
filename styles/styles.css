@@ -227,7 +227,7 @@ iframe {
   position: absolute;
   width: 7rem;
   height: 7rem;
-  z-index: -2;
+  opacity: 0.05;
 }
 
 .display {
