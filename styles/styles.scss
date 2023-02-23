@@ -3,69 +3,71 @@
 @use '../styles/partials/mixins' as*;
 
 // header
-.header{
-    &__logo--image{
-        position:absolute;
-        width:15%;
-        height:10%;
-        left:0%;
-        box-shadow:2px 2px 4px black;
+.header {
+    &__logo--image {
+        position: absolute;
+        width: 15%;
+        height: 10%;
+        left: 0%;
+        box-shadow: 2px 2px 4px black;
 
-        @include tablet{
-            width:90%;
-            height:0%;
-        }
+        @include tablet {
+            width: 90%;
+            height: 0%;
         }
     }
+}
 
 
 // Form Section
-.form{
-    position:absolute;
-    top:60%;
-    left:35%;
-    &__date{
-    font-size:1.5rem;
+.form {
+    position: absolute;
+    top: 60%;
+    left: 35%;
+
+    &__date {
+        font-size: 1.5rem;
     }
-    &__btn{
-        background-color:#deb887;
-        position:absolute;
-        top:150%;
-        right:50%;
+
+    &__btn {
+        background-color: #deb887;
+        position: absolute;
+        top: 150%;
+        right: 50%;
         transform: translateX(50%);
         display: inline-block;
-            padding: 0.5em 3em;
-            border: 0.16em solid #FFFFFF;
-            margin: 0 0.3em 0.3em 0;
-            box-sizing: border-box;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-family: 'Roboto', sans-serif;
-            font-weight: 400;
-            color: #FFFFFF;
-            text-align: center;
-            transition: all 0.15s;
+        padding: 0.5em 3em;
+        border: 0.16em solid #FFFFFF;
+        margin: 0 0.3em 0.3em 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+        color: #FFFFFF;
+        text-align: center;
+        transition: all 0.15s;
     }
 }
 
 button.form__btn--ron {
-   top:150%;
-   padding: 0.4em 3.4em;
+    top: 150%;
+    padding: 0.4em 3.4em;
 }
-button.form__btn--insp{
-  top:160%;
-  padding:0.9em 2em;
+
+button.form__btn--insp {
+    top: 160%;
+    padding: 0.9em 2em;
 }
 
 // hero section
-.hero{
-    &__image{
-    width:100vw;
-    height:100vh;
+.hero {
+    &__image {
+        width: 100vw;
+        height: 100vh;
     }
-    &__copyright{
 
-    }
+    &__copyright {}
 }
 
 
@@ -73,7 +75,5 @@ button.form__btn--insp{
 .hero__second--page {
     height: 100vh;
     width: 100vw;
+    position: relative;
 }
-
-
-
